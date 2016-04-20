@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<!--
+  copyright (c) 2010 Google inc.
+
+  You are free to copy and use this sample.
+  License can be found here: http://code.google.com/apis/ajaxsearch/faq/#license
+
+-->
+<html> 
+<head> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
+
+<title>Google Maps JavaScript API v3 Example: Fusion Tables Layer</title> 
+
+<style>
+  body { font-family: Arial, sans-serif; padding: 0px; margin: 0px; }
+  #map_canvas { height: 800px; width:1200px; }
+</style>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+<script type="text/javascript"> 
+
+var tableid = 297050;
+ 
+function initialize() {
+
+  var map = new google.maps.Map(document.getElementById('map_canvas'), {
+    center: new google.maps.LatLng(40.0706, -98.2399),
+    zoom: 4,
+    disableDefaultUI: true,
+    navigationControl: true,
+    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  new google.maps.Rectangle({
+    bounds:new google.maps.LatLngBounds(new google.maps.LatLng(42.0, -127.4), new google.maps.LatLng(49.0, -109.0)),
+    map:map,
+    fillOpacity: 0.2,
+    strokeOpacity: 0.5,
+    strokeWeight: 1,
+	strokeColor: '#FF0000',
+	fillColor: '#FF0000',
+  });
+  
+    new google.maps.Rectangle({
+    bounds:new google.maps.LatLngBounds(new google.maps.LatLng(31.3, -127.4), new google.maps.LatLng(42.0, -103.0)),
+    map:map,
+    fillOpacity: 0.2,
+    strokeOpacity: 0.5,
+    strokeWeight: 1,
+	strokeColor: '#007814',
+	fillColor: '#007814',
+  });
+
+    new google.maps.Rectangle({
+    bounds:new google.maps.LatLngBounds(new google.maps.LatLng(27.5, -103.0), new google.maps.LatLng(49.0, -94.6)),
+    map:map,
+    fillOpacity: 0.2,
+    strokeOpacity: 0.5,
+    strokeWeight: 1,
+	strokeColor: '#F07800',
+	fillColor: '#F07800',
+  });
+
+    new google.maps.Rectangle({
+    bounds:new google.maps.LatLngBounds(new google.maps.LatLng(25.0, -94.6), new google.maps.LatLng(37.67, -75.25)),
+    map:map,
+    fillOpacity: 0.2,
+    strokeOpacity: 0.5,
+    strokeWeight: 1,
+	strokeColor: '#1432F0',
+	fillColor: '#1432F0',
+  });
+ 
+    new google.maps.Rectangle({
+    bounds:new google.maps.LatLngBounds(new google.maps.LatLng(37.67, -94.6), new google.maps.LatLng(49.0, -82.36)),
+    map:map,
+    fillOpacity: 0.2,
+    strokeOpacity: 0.5,
+    strokeWeight: 1,
+	strokeColor: '#780078',
+	fillColor: '#780078',
+  });
+ 
+    new google.maps.Rectangle({
+    bounds:new google.maps.LatLngBounds(new google.maps.LatLng(37.67, -82.26), new google.maps.LatLng(46.94, -66.22)),
+    map:map,
+    fillOpacity: 0.2,
+    strokeOpacity: 0.5,
+    strokeWeight: 1,
+	strokeColor: '#000000',
+	fillColor: '#000000',
+  });
+ 
+}
+</script> 
+</head> 
+<body onload="initialize()"> 
+  <div id="map_canvas"></div>
+</body> 
+</html> 
